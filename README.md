@@ -10,16 +10,31 @@
     - 导出onnx，前后处理
     - 具体项目为案例，掌握如何处理复杂情况
 
+
+# 案例包含技术有（部署相关）
+- CUDADriver、CUDARuntime、WarpAffine、cublas、Kernel、Stream、SharedMemory、Atomic
+- YoloV5、YoloX、TensorRT-Plugin、TensorRT-ONNXParser
+- YoloV5-OBB(旋转框)、AlphaPose(姿态检测)、InsightFace(人脸识别)、UNet(场景分割)、RetinaFace(人脸检测)
+- HuggingFace-NER(NLP命名实体识别)、RoBERTa(中文文本分类)
+- mmdetection(导出其中的yolox)
+- self-driving(自动驾驶中部分感知技术)
+- ONNX-Runtime、OpenVINO，RKNN，不同的CPU推理引擎
+- LUA、PyBind11、HTTP-Server，不同的脚本语言调用封装
+- Lane车道线检测、Ldrn单目深度估计、Road行驶区域分割
+
+
 # 这是一个学习cuda、tensorrt的源代码案例项目
 1. 大量案例，从基础的cuda驱动api、运行时api到tensorrt的基础入门、tensorrt的高级进阶
 2. 模型的导出、模型的前后处理等等，多线程的封装等等
 3. 希望能够帮助你进一步掌握tensorRT
+
 
 # 使用方法-自行配置环境
 1. 案例均使用makefile作为编译工具
     - 在其中以`${@CUDA_HOME}`此类带有@符号表示为特殊变量
     - 替换此类特殊变量为你系统真实环境，即可顺利使用
 2. 大部分时候，配置完毕后，可以通过`make run`实现编译运行
+
 
 # 使用方法-自动配置环境
 1. 要求linux-ubuntu16.04以上系统，并配有GPU和显卡驱动大于495最佳
